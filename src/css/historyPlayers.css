@@ -1,0 +1,35 @@
+
+#historyList {
+    margin: 1px;
+    font-family: "Courier New";
+    font-size: 20px;
+}
+
+#historyPlayers {
+    /*background-color: red;*/
+    border: 4px solid black;
+    height: 345px;
+    max-width: 200px;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.hpAll{
+    display: inline-block;
+    margin:1px;
+    font-family: Roboto;
+    font-size: 20px;
+
+}
+.hpLeft{
+    text-align: left;
+    width: 80px;
+    max-width: 100px;
+
+}
+.hpRight{
+    text-align: right;
+    width:50px;
+    max-width: 60px;
+
+}

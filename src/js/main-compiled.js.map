@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":[],"mappings":";;AAAA,IAAI,UAAU,OAAO,OAAP,IAAkB,EAAhC;AACA,OAAO,KAAP,CAAa,QAAQ,MAAR,EAAb;AACA,OAAO,KAAP,CAAa,QAAQ,EAAR,EAAb","file":"main-compiled.js","sourcesContent":["var bbShoot = window.bbShoot || {};\r\nwindow.alert(bbShoot.bubble());\r\nwindow.alert(bbShoot.ma());\r\n"]}

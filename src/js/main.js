@@ -1,0 +1,4 @@
+var bbShoot = window.bbShoot || {};
+
+
+

@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>bbShoot One</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans">-->
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Shadows+Into+Light+Two|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/bubble.css">
+    <link rel="stylesheet" href="css/historyPlayers.css">
+
+</head>
+<body>
+
+
+<div id="container">
+    <div id="top">
+        <p class="title">bbShoot One</p>
+
+    </div>
+    <div id="main">
+        <div id="lside">
+        </div>
+        <div id="infoSide">
+            <div id="scoreArea" class="infoParts">
+                <p id="playerName" class="levelC"></p>
+                <p class="levelC">Level:<span id="level">0</span></p>
+                <p id="scoreLabel">Score</p>
+                <div id="score">000</div>
+            </div>
+            <div id="inputArea" class="infoParts">
+                <div>Player</div>
+
+                <input type="text" id="playerNameIn" class="ax" placeholder="Enter your name" autofocus>
+
+
+            </div>
+        </div>
+        <div id="boardArea">
+            <div id="board">
+                <!--<p>board</p>-->
+
+            </div>
+            <div id="boardBottom">
+
+                <button id="startButton">Start</button>
+                <button id="test1">monkey</button>
+                <!--<button id="test2">shootMe</button>-->
+                <!--<button id="test3">stop</button>-->
+                <!--<audio src="audio/finish.wav" autoplay controls></audio>-->
+            </div>
+            <div id="messageArea">
+
+            </div>
+        </div>
+        <div id="historySide">
+            <div id="historyPlayers">
+                <p class="records">records</p>
+                <ul id="historyList">
+                </ul>
+            </div>
+        </div>
+        <div id="rside">
+        </div>
+    </div>
+    <div id="bottom">
+
+    </div>
+</div>
+<script src="js/bubble.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/scoreBoard.js"></script>
+<script src="js/historyPlayers.js"></script>
+<script src="js/board.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #boxOut {
+            background-color: beige;
+            height: 100px;
+            width: 100px;
+            margin: 15px;
+            padding: 10px;
+            border: 10px solid black;
+        }
+
+        #boxIn {
+            background-color: lightsalmon;
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+            padding: 5px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="boxOut">
+    <div id="boxIn">
+
+    </div>
+
+</div>
+<button id="b1" onclick="test()">test</button>
+<script>
+    var boxOut = document.querySelector("#boxOut");
+    var boxIn = document.querySelector("#boxIn");
+    function test() {
+        var bOut= boxOut.offsetLeft;
+        var bIn= boxIn.offsetLeft;
+        var bIn2=boxIn.getBoundingClientRect();
+        alert(bIn+' '+bIn2.left);
+    }
+</script>
+</body>
+</html>

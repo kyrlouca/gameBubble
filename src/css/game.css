@@ -1,0 +1,206 @@
+@font-face {
+    font-family: digitalB;
+    src: url('../fonts/DS-DIGIB.TTF');
+}
+
+#container {
+    background-color: lightyellow;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+
+    background-color: lightyellow;
+    height: 100px;
+    flex: 0 0;
+}
+
+#bottom {
+    background-color: lightyellow;
+    flex: 1 1;
+}
+
+#main {
+    background-color: lightgreen;
+    flex: 0 0 680px;
+    flex-direction: row;
+    display: flex;
+
+}
+
+#boardArea {
+    position: relative;
+    flex: 0 0 450px;
+    background-color: lightyellow;
+    /*height:500px;*/
+
+    margin: 0;
+    padding: 0;
+    /*height: 800px;*/
+
+}
+
+#board {
+    position: relative;
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 3px;
+
+    height: 500px;
+    width: 400px;
+}
+
+#boardFire {
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    opacity: 0;
+    /*height: 50px;*/
+    width: 100%;
+    z-index: -1;
+}
+
+#boardBottom {
+    position: relative;
+    background-color: #a4efff;
+    height: 50px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+}
+
+#messageArea {
+    margin: 10px;
+    font-size: 3em;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-weight: bold;
+    color: red;
+}
+
+#startButton {
+    background-color: blue;
+    color: white;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: large;
+}
+
+#lside, #rside {
+    background-color: lightyellow;
+    flex: 1 1 100px;
+
+}
+
+#infoSide {
+    background-color: lightyellow;
+    flex: 0 0 180px;
+}
+
+#historySide {
+    background-color: lightyellow;
+    flex: 0 0 300px;
+}
+
+#historySide .records {
+    margin: 2px;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+#scoreArea {
+    /*width: 180px;*/
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 345px;
+}
+
+#inputArea {
+    margin-top: 0px;
+    height: 143px;
+}
+
+.infoParts {
+    background-color: red;
+    border: 2px solid black;
+    /*margin: 30px;*/
+    margin-right: 20px;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.levelC {
+    margin: 5px;
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+
+#scoreLabel {
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+#score {
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: 'digitalB';
+    font-size: 100px;
+    line-height: 1;
+}
+
+#playerName {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    margin: 10px;
+    font-size: 4em;
+}
+
+.bobble {
+    animation: bobble 0.5s infinite;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+@keyframes bobble {
+    0% {
+        transform: scale(1.1, 1.1) translate3d(1px, 1px, 0px);;
+        animation-timing-function: ease-in;
+    }
+
+    25% {
+        transform: scale(1.1, 1.1) translate3d(-2px, -2px, 0px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: scale(1.1, 1.1) translate3d(0px, 2px, 0px);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: scale(1.1, 1.1) translate3d(2px, 0px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+
+        transform: scale(1, 1) translate3d(1px, 1px, 0px);
+    }
+
+}
+
+.ax {
+    display: inline-block;
+
+    width: 120px;
+    line-height: 1.4;
+
+}
