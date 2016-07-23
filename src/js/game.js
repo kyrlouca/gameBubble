@@ -78,7 +78,7 @@ var bbShoot = window.bbShoot || {};
             var fireB;
             this.player = player;
             this.isOn   = true;
-            this.score  = 0
+            this.score  = 0;
             this.cBoard.clearBoard();
             this.cBoard.createBubbles(bbShoot.constants.rowSize, bbShoot.constants.colSize);
             this.setLevel(-1);
@@ -104,7 +104,7 @@ var bbShoot = window.bbShoot || {};
             this.cBoard.sprite.removeEventListener('mousedown', shootOnClick);
             this.cBoard.sprite.removeEventListener('dblclick', preventDblClick);
             clearInterval(timer1);
-                playSound('audio//glassbreak.wav');
+                playSound('resources//audio//glassbreak.wav');
             if (this.isOn){
                 players.push({name: game.player, score: game.score});
                 evt = new CustomEvent('hpUpdateEvt', {detail: {players: players}});
@@ -116,7 +116,7 @@ var bbShoot = window.bbShoot || {};
     }
 
     var playSound = (function playSound() {
-        var path         = 'audio//blib1.mp3';
+        var path         = 'resources//audio//blib1.mp3';
         var audioElement = document.createElement('audio');
         var myPlay       = function (fPath) {
             path = fPath || path;
@@ -185,7 +185,7 @@ var bbShoot = window.bbShoot || {};
                         realHits++;
                         gBoard.removeBubble(hitB);
                         game.score++;
-                        playSound('audio/blib1.mp3');
+                        playSound('resources/audio/blib1.mp3');
 
                         evt = new CustomEvent('sbScoreEvt', {detail: {val: game.score}});
                         bbShoot.scoreBoard.sprite.dispatchEvent(evt);
@@ -338,7 +338,7 @@ var bbShoot = window.bbShoot || {};
         evt = new CustomEvent('sbLevelEvt', {'detail': {val: info.level}});
         bbShoot.scoreBoard.sprite.dispatchEvent(evt);
 
-        window.clearTimeout(timerLevel)
+        window.clearTimeout(timerLevel);
         timerLevel = window.setTimeout(changeLevel2, game.changeLevelFreq);// seconds to change level
 
 
@@ -354,7 +354,7 @@ var bbShoot = window.bbShoot || {};
 
     function stopAutofire() {
         clearTimeout(timer1);
-        clearInterval(timerLevel)
+        clearInterval(timerLevel);
     }
 
 
@@ -388,10 +388,7 @@ var bbShoot = window.bbShoot || {};
     }
 
     function test1() {
-        var dt = 20;
-        clearInterval(timer1);
-        timer1     = setInterval(shootOnTimer, dt);//seconds to shoot by itself
-        timerLevel = setInterval(changeLevel, game.changeLevelFreq);// seconds to change level
+
     }
 
     document.querySelector('#startButton').onclick = startbbGame;
@@ -399,7 +396,7 @@ var bbShoot = window.bbShoot || {};
             if (e.keyCode===13){
                 startbbGame();
             }
-    })
+    });
     document.querySelector('#test1').onclick       = test1;
     //document.querySelector('#test1').style.display = "none";
 
