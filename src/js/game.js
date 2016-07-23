@@ -26,16 +26,18 @@ var bbShoot = window.bbShoot || {};
             this.score  = 0;
             //this.settings = {};
             this.levels = [
-                {fireInterval: 2000, steps: 40},
-                {fireInterval: 1200, steps: 30},
-                {fireInterval: 500, steps: 20},
-                {fireInterval: 100, steps: 10}
+                {fireInterval: 2000, steps: 50},
+                {fireInterval: 1500, steps: 40},
+                {fireInterval: 1000, steps: 30},
+                {fireInterval: 400, steps: 25},
+                {fireInterval: 100, steps: 30}
             ];
             this.klevels= [
                 {fireInterval: 2500, steps: 50},
-                {fireInterval: 1600, steps: 45},
+                {fireInterval: 2000, steps: 45},
+                {fireInterval: 1500, steps: 40},
                 {fireInterval: 1200, steps: 40},
-                {fireInterval: 500, steps: 30}
+                {fireInterval: 200, steps: 20}
             ];
 
             this.name   = "anonumous";
@@ -76,11 +78,11 @@ var bbShoot = window.bbShoot || {};
             var fireB;
             this.player = player;
             this.isOn   = true;
-            this.score  = 0;
+            this.score  = 0
             this.cBoard.clearBoard();
             this.cBoard.createBubbles(bbShoot.constants.rowSize, bbShoot.constants.colSize);
-            this.setLevel();
-            this.changeLevelFreq=10*1000; // seconds to change level
+            this.setLevel(-1);
+            this.changeLevelFreq=20*1000; // seconds to change level
 
             fireB                  = this.cBoard.createFireBubble();
             this.cBoard.fireBubble = fireB;
@@ -94,7 +96,7 @@ var bbShoot = window.bbShoot || {};
             //document.querySelector('#test2').onclick = changeLevel();
             //document.querySelector('#test3').onclick       = autoFire;
 
-            autoFire();
+            changeLevel2();
         }
 
         stopGame() {
@@ -319,28 +321,42 @@ var bbShoot = window.bbShoot || {};
         bbShoot.drawSprite(fireB);
         moveBubble(fireB, point);
     }
+    function changeLevel2(){
+    //todo check if this function belongs to game class
+        //call itself in x seconds by changing level
+        // and set fire frequency
+        //increase level which g
+        var evt;
+        var info   = {};
 
-    function autoFire() {
+
+        info.level = Math.min(game.level + 1, game.levels.length - 1);
+        game.setLevel(info.level);
+        setFireFrequency();
+
+        //notify scoreBoard Element
+        evt = new CustomEvent('sbLevelEvt', {'detail': {val: info.level}});
+        bbShoot.scoreBoard.sprite.dispatchEvent(evt);
+
+        window.clearTimeout(timerLevel)
+        timerLevel = window.setTimeout(changeLevel2, game.changeLevelFreq);// seconds to change level
+
+
+
+    }
+    function setFireFrequency() {
+        //fireInterval set by level attribute
         var dt = game.gSettings.fireInterval;
-        clearInterval(timer1);
-        timer1     = setInterval(shootOnTimer, dt);//seconds to shoot by itself
-        timerLevel = setInterval(changeLevel, game.changeLevelFreq);// seconds to change level
+
+        window.clearInterval(timer1);
+        timer1     = window.setInterval(shootOnTimer, dt);//seconds to shoot by itself
     }
 
     function stopAutofire() {
         clearTimeout(timer1);
+        clearInterval(timerLevel)
     }
 
-    function changeLevel() {
-        //todo check if this function belongs to game class
-        //increase level which g
-        var evt;
-        var info   = {};
-        info.level = Math.min(game.level + 1, game.levels.length - 1);
-        game.setLevel(info.level);
-        evt = new CustomEvent('sbLevelEvt', {'detail': {val: info.level}});
-        bbShoot.scoreBoard.sprite.dispatchEvent(evt);
-    }
 
     function bubbleDance(bubble) {
         bubble.sprite.classList.add('bobble');
