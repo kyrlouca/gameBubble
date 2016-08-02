@@ -18,7 +18,8 @@
 }
 
 #bottom {
-    background-color: lightyellow;
+    /*background-color: lightyellow;*/
+    background-color: red;
     flex: 1 1;
 }
 
