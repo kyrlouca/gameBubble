@@ -18,49 +18,32 @@
 }
 
 #bottom {
-    /*background-color: lightyellow;*/
-    background-color: red;
+    background-color: lightyellow;
     flex: 1 1;
 }
 
 #main {
-    background-color: lightgreen;
-    flex: 0 0 680px;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#lside, #rside {
     background-color: lightyellow;
-    flex: 1 1 100px;
+    /*margin:0 auto;*/
+    flex: 0 0 680px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 #infoSide {
     background-color: lightyellow;
-    flex: 0 0 180px;
+    flex: 0 1 180px;
 }
-
 
 #boardArea {
     position: relative;
-    flex: 0 0 450px;
+    flex: 0 0 10px;
     background-color: lightyellow;
-    /*height:500px;*/
-    margin: 0;
+    margin: 0 10px 0 10px;
     padding: 0;
-    /*height: 800px;*/
-}
-
-#historySide {
-    background-color: lightyellow;
-    flex: 0 0 300px;
-}
-
-#historySide .records {
-    margin: 2px;
-    font-size: 50px;
-    text-align: center;
 }
 
 #board {
@@ -71,6 +54,30 @@
 
     height: 500px;
     width: 400px;
+    margin:0 auto;
+}
+
+
+#historySide {
+    background-color: lightyellow;
+    display: block;
+    flex: 0 1 200px;
+}
+
+#historySide .records {
+    margin: 2px;
+    font-size: 50px;
+    text-align: center;
+}
+
+/*@media only screen and (max-device-width: 900px) {*/
+@media only screen and (max-device-width: 900px) {
+    #main {
+        /*background-color: lightgreen;*/
+    }
+    #historySide{
+        display:none;
+    }
 }
 
 #boardFire {
@@ -85,6 +92,7 @@
 
 #boardBottom {
     position: relative;
+    margin:0 auto;
     background-color: #a4efff;
     height: 50px;
     width: 400px;
@@ -112,17 +120,14 @@
 
 
 
-
-
 #scoreArea {
     /*width: 180px;*/
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin:0 5px 0 0;
     height: 345px;
 }
 
 #inputArea {
-    margin-top: 0px;
+    margin:0 5px 0 0;
     height: 143px;
 }
 
