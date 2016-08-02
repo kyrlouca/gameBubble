@@ -53,7 +53,7 @@ gulp.task('uglify', function () {
 
 gulp.task('clean', function () {
     "use strict";
-    del('dist/**/*.*');
+    del(['dist/**/*.js','dist/**/*.html']);
 });
 
 
@@ -66,21 +66,10 @@ gulp.task('filter', function () {
         .pipe(gulp.dest('dist/ta'));
 });
 
-gulp.task('ren', function () {
-    "use strict";
-
-    gulp.src("dist/index*.*")
-        .pipe(rename(function (path) {
-            path.basename = "indexGbb";
-        }))
-        .pipe(gulp.dest("./dist")); // ./dist/main/text/ciao/hello-goodbye.md
-});
-
-gulp.task('vulcanAll', function () {
+gulp.task('prep1', function () {
     "use strict";
     var filterJs = filter(['**/*.js'], {restore: true});
-
-    return gulp.src('src/index.html')
+    gulp.src("src/index.html")
         .pipe(vulcanize({
             abspath: '',
             excludes: [],
@@ -89,18 +78,16 @@ gulp.task('vulcanAll', function () {
             inlineScripts: true,
             inlineCss: true
         }))
+        .pipe(rename(function (path) {
+            path.basename = "indexGbb";
+        }))
         .pipe(crisper({
             scriptInHead: false, // true is default
             onlySplit: false
         }))
         .pipe(filterJs)
         .pipe(babel({presets: ['es2015']}))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(filterJs.restore)
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest("./dist")); // ./dist/main/text/ciao/hello-goodbye.md
 });
-
-//.pipe(rename(function (path) {
-//        path.basename = "indexGbb";
-//    })
-//)

@@ -27,19 +27,39 @@
     flex: 0 0 680px;
     flex-direction: row;
     display: flex;
-
+    flex-wrap: wrap;
 }
+
+#lside, #rside {
+    background-color: lightyellow;
+    flex: 1 1 100px;
+}
+
+#infoSide {
+    background-color: lightyellow;
+    flex: 0 0 180px;
+}
+
 
 #boardArea {
     position: relative;
     flex: 0 0 450px;
     background-color: lightyellow;
     /*height:500px;*/
-
     margin: 0;
     padding: 0;
     /*height: 800px;*/
+}
 
+#historySide {
+    background-color: lightyellow;
+    flex: 0 0 300px;
+}
+
+#historySide .records {
+    margin: 2px;
+    font-size: 50px;
+    text-align: center;
 }
 
 #board {
@@ -89,27 +109,8 @@
     font-size: large;
 }
 
-#lside, #rside {
-    background-color: lightyellow;
-    flex: 1 1 100px;
 
-}
 
-#infoSide {
-    background-color: lightyellow;
-    flex: 0 0 180px;
-}
-
-#historySide {
-    background-color: lightyellow;
-    flex: 0 0 300px;
-}
-
-#historySide .records {
-    margin: 2px;
-    font-size: 50px;
-    text-align: center;
-}
 
 
 #scoreArea {
