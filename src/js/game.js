@@ -374,7 +374,7 @@ var bbShoot = window.bbShoot || {};
 
     var mq= window.matchMedia( "(max-width: 900px)");
         if (!mq.matches) {
-            
+
             if(!nameBox.value) {
                 document.querySelector("#messageArea").innerText = "Enter your name first!";
                 nameBox.focus();

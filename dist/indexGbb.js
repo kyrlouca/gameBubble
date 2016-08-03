@@ -895,10 +895,14 @@ var bbShoot = window.bbShoot || {};
         var nameBox = document.querySelector('#playerNameIn'),
             playerName = nameBox.value;
 
-        if (!nameBox.value) {
-            document.querySelector("#messageArea").innerText = "Enter your name first!";
-            nameBox.focus();
-            return;
+        var mq = window.matchMedia("(max-width: 900px)");
+        if (!mq.matches) {
+
+            if (!nameBox.value) {
+                document.querySelector("#messageArea").innerText = "Enter your name first!";
+                nameBox.focus();
+                return;
+            }
         }
         gBoard = bbShoot.board;
         if (!exports.game) {
