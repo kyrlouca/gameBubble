@@ -1,38 +1,75 @@
 @media all and (max-width: 900px) {
     #main {
         flex-wrap: wrap;
+        flex-direction: column;
         /*background-color: lightgreen;*/
+    }
+    #top{
+        display: none;
     }
     #boardArea{
         order:1;
+        height:500px;
     }
-    #historySide{
-        display:none;
+    #board{
+        height:400px;
     }
+
     #infoSide{
         order:2;
+    }
+
+    #historySide{
+        order:3;
+        display:none;
     }
     .title {
         margin: 1px;
         font-size: 180%;
     }
     .levelC{
+        display: inline-block;
       font-size:70%;
         line-height: 1;
     }
     #scoreArea{
-        width:400px;
+        /*width:400px;*/
+        width:100%;
+        height:25px;
+        display: inline-block;
+    }
+    #inputArea{
+        height:30px;
+    }
+    #inputArea div{
+        display:inline-block;
+    }
+    #inputArea input{
+        display: inline-block;
+    }
+    #playerName {
+        font-size: 80%;
+        font-weight: 400;
+    }
+
+    .infoParts{
+        background-color: green;
+        margin-top: 4px;
+        font-size: 130%;
+        line-height:0.8;
+
     }
     #scoreLabel{
         display:inline-block;
-        font-size:70%;
-        line-height: 1;
+        font-size:80%;
+        line-height: 0.8;
     }
 
     #score {
         display:inline-block;
         font-size: 100%;
         line-height: 1;
+
     }
 
 }

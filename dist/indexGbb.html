@@ -291,6 +291,7 @@ textarea {
     <style>
 @font-face {
     font-family: digitalB;
+    font-size:25px;
     src: url("resources/fonts/DS-DIGIB.TTF");
 }
 
@@ -299,6 +300,7 @@ textarea {
     height: 100%;
     display: flex;
     flex-direction: column;
+
 }
 
 #top {
@@ -323,7 +325,6 @@ textarea {
     justify-content: center;
     flex-wrap: nowrap;
 }
-
 #infoSide {
     background-color: lightyellow;
     flex: 0 1 180px;
@@ -357,19 +358,11 @@ textarea {
 
 #historySide .records {
     margin: 2px;
-    font-size: 50px;
+    font-size: 150%;
     text-align: center;
 }
 
 /*@media only screen and (max-device-width: 900px) {*/
-@media only screen and (max-device-width: 900px) {
-    #main {
-        /*background-color: lightgreen;*/
-    }
-    #historySide{
-        display:none;
-    }
-}
 
 #boardFire {
     position: absolute;
@@ -394,10 +387,11 @@ textarea {
 
 #messageArea {
     margin: 10px;
-    font-size: 3em;
+    font-size: 250%;
     font-family: 'Shadows Into Light Two', cursive;
     font-weight: bold;
     color: red;
+    text-align: center;
 }
 
 #startButton {
@@ -427,20 +421,22 @@ textarea {
     border: 2px solid black;
     /*margin: 30px;*/
     margin-right: 20px;
-    font-size: 2.2em;
+    /*font-size: 2.2em;*/
+    font-size: 200%;
     text-align: center;
 }
 
 .levelC {
     margin: 5px;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 160%;
 }
 
 #scoreLabel {
     margin: 0px;
     margin-bottom: 5px;
-    font-size: 1.4em;
+    /*font-size: 1.4em;*/
+    font-size: 140%;
 }
 
 #score {
@@ -560,6 +556,82 @@ textarea {
 }
 
 </style>
+    <style>
+@media all and (max-width: 900px) {
+    #main {
+        flex-wrap: wrap;
+        /*background-color: lightgreen;*/
+    }
+    #top{
+        display: none;
+    }
+    #boardArea{
+        order:1;
+        height:350px;
+    }
+    #board{
+        height:300px;
+    }
+
+    #infoSide{
+        order:2;
+    }
+
+    #historySide{
+        order:3;
+        display:none;
+    }
+    .title {
+        margin: 1px;
+        font-size: 180%;
+    }
+    .levelC{
+        display: inline-block;
+      font-size:70%;
+        line-height: 1;
+    }
+    #scoreArea{
+        width:400px;
+        height:25px;
+        display: inline-block;
+    }
+    #inputArea{
+        height:30px;
+    }
+    #inputArea div{
+        display:inline-block;
+    }
+    #inputArea input{
+        display: inline-block;
+    }
+    #playerName {
+        font-size: 80%;
+        font-weight: 400;
+    }
+
+    .infoParts{
+        background-color: green;
+        margin-top: 4px;
+        font-size: 130%;
+        line-height:0.8;
+
+    }
+    #scoreLabel{
+        display:inline-block;
+        font-size:80%;
+        line-height: 0.8;
+    }
+
+    #score {
+        display:inline-block;
+        font-size: 100%;
+        line-height: 1;
+
+    }
+
+}
+
+</style>
 
 </head>
 <body>
@@ -567,7 +639,7 @@ textarea {
 
 <div id="container">
     <div id="top">
-        <p class="title">bbShoot One</p>
+        <p class="title">bbShoot One S</p>
 
     </div>
     <div id="main">
@@ -593,7 +665,7 @@ textarea {
             </div>
             <div id="boardBottom">
 
-                <button id="startButton">Start</button>
+                <button id="startButton">Start1</button>
                 <button id="test1">monkey</button>
                 
                 
