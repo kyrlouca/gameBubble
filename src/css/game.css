@@ -37,7 +37,8 @@
 
 #infoSide {
     background-color: lightyellow;
-    flex: 0 1 180px;
+    /*flex: 0 1 180px;*/
+    flex: 0 0 180px;
 }
 
 #boardArea {
@@ -63,7 +64,7 @@
 #historySide {
     background-color: lightyellow;
     display: block;
-    flex: 0 1 200px;
+    flex: 0 0 200px;
 }
 
 #historySide .records {
