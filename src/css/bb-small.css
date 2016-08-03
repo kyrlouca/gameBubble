@@ -17,6 +17,9 @@
 
     #infoSide{
         order:2;
+        width:400px;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     #historySide{
@@ -40,6 +43,7 @@
     }
     #inputArea{
         height:30px;
+        width:100%;
     }
     #inputArea div{
         display:inline-block;
