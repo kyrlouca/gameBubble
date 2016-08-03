@@ -1,0 +1,38 @@
+@media all and (max-width: 900px) {
+    #main {
+        flex-wrap: wrap;
+        /*background-color: lightgreen;*/
+    }
+    #boardArea{
+        order:1;
+    }
+    #historySide{
+        display:none;
+    }
+    #infoSide{
+        order:2;
+    }
+    .title {
+        margin: 1px;
+        font-size: 180%;
+    }
+    .levelC{
+      font-size:70%;
+        line-height: 1;
+    }
+    #scoreArea{
+        width:400px;
+    }
+    #scoreLabel{
+        display:inline-block;
+        font-size:70%;
+        line-height: 1;
+    }
+
+    #score {
+        display:inline-block;
+        font-size: 100%;
+        line-height: 1;
+    }
+
+}

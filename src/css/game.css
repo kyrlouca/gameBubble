@@ -1,5 +1,6 @@
 @font-face {
     font-family: digitalB;
+    font-size:25px;
     src: url('../resources/fonts/DS-DIGIB.TTF');
 }
 
@@ -8,6 +9,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+
 }
 
 #top {
@@ -66,19 +68,11 @@
 
 #historySide .records {
     margin: 2px;
-    font-size: 50px;
+    font-size: 150%;
     text-align: center;
 }
 
 /*@media only screen and (max-device-width: 900px) {*/
-@media only screen and (max-device-width: 900px) {
-    #main {
-        /*background-color: lightgreen;*/
-    }
-    #historySide{
-        display:none;
-    }
-}
 
 #boardFire {
     position: absolute;
@@ -103,10 +97,11 @@
 
 #messageArea {
     margin: 10px;
-    font-size: 3em;
+    font-size: 250%;
     font-family: 'Shadows Into Light Two', cursive;
     font-weight: bold;
     color: red;
+    text-align: center;
 }
 
 #startButton {
@@ -136,20 +131,22 @@
     border: 2px solid black;
     /*margin: 30px;*/
     margin-right: 20px;
-    font-size: 2.2em;
+    /*font-size: 2.2em;*/
+    font-size: 200%;
     text-align: center;
 }
 
 .levelC {
     margin: 5px;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 160%;
 }
 
 #scoreLabel {
     margin: 0px;
     margin-bottom: 5px;
-    font-size: 1.4em;
+    /*font-size: 1.4em;*/
+    font-size: 140%;
 }
 
 #score {
