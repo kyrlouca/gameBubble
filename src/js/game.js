@@ -372,6 +372,8 @@ var bbShoot = window.bbShoot || {};
         var nameBox    = document.querySelector('#playerNameIn'),
             playerName = nameBox.value;
 
+        document.querySelector(".scroll-outer").style.opacity=0;
+
     var mq= window.matchMedia( "(max-width: 900px)");
         if (!mq.matches) {
 
@@ -395,7 +397,12 @@ var bbShoot = window.bbShoot || {};
 
     }
     function test2(){
-        window.alert('hello C ...');
+        var outer= document.querySelector(".scroll-outer");
+        var inner= document.querySelector(".scroll-inner");
+        //window.alert(inner.textContent);
+        outer.style.opacity=1;
+        inner.style.transform='translate3d(-170px,0,0)';
+            //transform:
     }
 
     document.querySelector('#startButton').onclick = startbbGame;

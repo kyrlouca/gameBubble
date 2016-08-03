@@ -915,6 +915,9 @@ var bbShoot = window.bbShoot || {};
     }
 
     function test1() {}
+    function test2() {
+        window.alert('hello C ...');
+    }
 
     document.querySelector('#startButton').onclick = startbbGame;
     document.querySelector('#playerNameIn').onkeydown = function (e) {
@@ -922,6 +925,6 @@ var bbShoot = window.bbShoot || {};
             startbbGame();
         }
     };
-    document.querySelector('#test1').onclick = test1;
-    //document.querySelector('#test1').style.display = "none";
+    //document.querySelector('#test1').onclick       = test1;
+    document.querySelector('#test2').onclick = test2;
 })(bbShoot);

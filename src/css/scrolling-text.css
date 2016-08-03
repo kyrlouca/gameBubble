@@ -1,0 +1,35 @@
+.scroll-outer{
+    opacity: 0;
+    flex-direction: column;
+    background-color: rgba(64, 64, 64, 0.53);
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top:20px;
+    left:20px;
+    height:60px;
+    width:180px;
+    transition: all 0.2s ease-in;
+}
+.scroll-inner{
+    /*background-color: #00d4b4;*/
+    position: relative;
+    bottom:20px;
+    right:-180px;
+    height: 30px;
+    width:100px;
+    font-family: "Comic Sans MS";
+    font-size:30px;
+    color: white;
+    text-align: left;
+    text-overflow: clip;
+    white-space: nowrap;
+
+
+    transition: transform 2.5s ease-in;
+
+}
+.scroll-inner:hover{
+    transform: translate3d(-180px,0,0);
+}

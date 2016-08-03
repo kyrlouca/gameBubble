@@ -328,7 +328,8 @@ textarea {
 
 #infoSide {
     background-color: lightyellow;
-    flex: 0 1 180px;
+    /*flex: 0 1 180px;*/
+    flex: 0 0 180px;
 }
 
 #boardArea {
@@ -354,7 +355,7 @@ textarea {
 #historySide {
     background-color: lightyellow;
     display: block;
-    flex: 0 1 200px;
+    flex: 0 0 200px;
 }
 
 #historySide .records {
@@ -560,7 +561,7 @@ textarea {
     <style>
 @media all and (max-width: 900px) {
     #main {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-direction: column;
         justify-content: flex-start;
         /*background-color: lightgreen;*/
@@ -580,10 +581,18 @@ textarea {
 
     #infoSide{
         order:2;
-        width:400px;
-        margin-left:auto;
-        margin-right:auto;
-        padding-left:2px;
+        flex: 0 0 20px;
+        /*height: 20px;*/
+
+        position: relative;
+        margin:0 auto;
+        background-color: #a4efff;
+
+        width: 350px;
+        border: 1px solid black;
+        border-radius: 3px;
+
+
     }
 
     #historySide{
@@ -601,11 +610,18 @@ textarea {
     }
     #scoreArea{
         /*width:400px;*/
+
         width:100%;
+        margin-left:auto;
+        margin-right: auto;
         height:25px;
         display: inline-block;
+
+        border-width: 1px;
+
     }
     #inputArea{
+        display:none;
         height:30px;
         width:100%;
     }
@@ -621,7 +637,7 @@ textarea {
     }
 
     .infoParts{
-        background-color: green;
+        /*background-color: green;*/
         margin-top: 4px;
         font-size: 130%;
         line-height:0.8;
@@ -678,8 +694,8 @@ textarea {
             <div id="boardBottom">
 
                 <button id="startButton">Start1</button>
-                <button id="test1">monkey12</button>
                 
+                <button id="test2">Test</button>
                 
                 
             </div>
