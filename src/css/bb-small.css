@@ -2,17 +2,20 @@
     #main {
         flex-wrap: wrap;
         flex-direction: column;
+        justify-content: flex-start;
         /*background-color: lightgreen;*/
     }
     #top{
-        display: none;
+        /*display: none;*/
+        height:40px;
+        line-height: 1.1;
     }
     #boardArea{
         order:1;
         height:500px;
     }
     #board{
-        height:400px;
+        height:450px;
     }
 
     #infoSide{
@@ -20,6 +23,7 @@
         width:400px;
         margin-left:auto;
         margin-right:auto;
+        padding-left:2px;
     }
 
     #historySide{

@@ -325,6 +325,7 @@ textarea {
     justify-content: center;
     flex-wrap: nowrap;
 }
+
 #infoSide {
     background-color: lightyellow;
     flex: 0 1 180px;
@@ -560,21 +561,29 @@ textarea {
 @media all and (max-width: 900px) {
     #main {
         flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
         /*background-color: lightgreen;*/
     }
     #top{
-        display: none;
+        /*display: none;*/
+        height:40px;
+        line-height: 1.1;
     }
     #boardArea{
         order:1;
-        height:350px;
+        height:500px;
     }
     #board{
-        height:300px;
+        height:450px;
     }
 
     #infoSide{
         order:2;
+        width:400px;
+        margin-left:auto;
+        margin-right:auto;
+        padding-left:2px;
     }
 
     #historySide{
@@ -591,12 +600,14 @@ textarea {
         line-height: 1;
     }
     #scoreArea{
-        width:400px;
+        /*width:400px;*/
+        width:100%;
         height:25px;
         display: inline-block;
     }
     #inputArea{
         height:30px;
+        width:100%;
     }
     #inputArea div{
         display:inline-block;
@@ -639,7 +650,7 @@ textarea {
 
 <div id="container">
     <div id="top">
-        <p class="title">bbShoot One S</p>
+        <p class="title">kyrLouca bbShoot</p>
 
     </div>
     <div id="main">
@@ -666,7 +677,7 @@ textarea {
             <div id="boardBottom">
 
                 <button id="startButton">Start1</button>
-                <button id="test1">monkey</button>
+                <button id="test1">monkey12</button>
                 
                 
                 
